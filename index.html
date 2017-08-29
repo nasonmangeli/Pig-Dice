@@ -10,6 +10,10 @@
   </head>
   <body>
     <div class="container">
+
+      <nav >
+
+      </nav>
       <h1>Pig Dice</h1>
       <h2>Rules</h2>
       <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
@@ -23,18 +27,53 @@ For example, the first player, Ann, begins a turn with a roll of 5. Ann could ho
 
 </p>
 
-  <div class="row">
-    <div class="col-md-6">
-      <div class="player1">
-
+      <div class="row">
+        <div class="col-md-6">
+          <div class="player1">
+            <form id="players">
+              <div class="form-group">
+                <label for="player1">Player1</label>
+                <input required id="player1-name" placeholder="Enter Name" type="text" class="form-control">
+              </div>
+            <button type="submit" class="btn btn-info" id="enterNames">Lets Pig-Dice</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="player2">
+              <div class="form-group">
+                <label for="player2">Player2</label>
+                <input required id="player2-name" type="text" placeholder="Enter Name" class="form-control">
+              </div>
+          </div>
+          </form>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="player2">
 
-      </div>
-    </div>
+      <div class="gaming-console">
+
+
+
+<div class="row">
+  <div id="player1-window" class="col-md-6">
+    <h2>Player 1 :<span class="player1name"></span></h2>
+    <h2>Dice Roll: <span id="roll1"></span></h2>
+    <p>Turn points: <span id="turnPoints1"></span></p>
+    <p>Score: <span id="score1"></span></p>
+    <button id="player1Roll" class="btn btn-danger">Roll the Dice</button>
+    <button id="player1Hold" class="btn btn-success">Hold</button>
   </div>
+  <div id="player2-window" class="col-md-6">
+    <h2>Player 2 :<span class="player2name"></span></h2>
+    <h2>Dice Roll: <span id="roll2"></span></h2>
+    <p>Turn points: <span id="turnPoints2"></span></p>
+    <p>Score: <span id="score2"></span></p>
+    <button id="player2Roll" class="btn btn-danger">Roll the Dice</button>
+    <button id="player2Hold" class="btn btn-success">Hold</button>
+  </div>
+</div>
+
+
+
 
     </div>
   </body>
